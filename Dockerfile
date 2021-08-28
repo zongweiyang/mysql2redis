@@ -1,16 +1,17 @@
 # Pull base image.
-FROM mysql:5.7
+#FROM mysql:5.7
+FROM vanjaydo/mysql2redis:latest
 
 # Code below is to install github opensource project mysql2redis 👉 https://github.com/dawnbreaks/mysql2redis
 # install dependences
 RUN apt-get  update
 RUN apt-get  install -y  git gcc cmake \
-    && apt-get install -y  libjemalloc1 libjemalloc-dev \
-    && apt install -y libexpat1-dev  libmysqlclient-dev libaprutil1-dev libapr1-dev \
-    && ln -s /usr/include/apr-1.0 /usr/include/apr-1
+#    && apt-get install -y  libjemalloc1 libjemalloc-dev \
+#    && apt install -y libexpat1-dev  libmysqlclient-dev libaprutil1-dev libapr1-dev \
+#    && ln -s /usr/include/apr-1.0 /usr/include/apr-1
 
-RUN apt update \
-    && apt install -y libmariadbclient-dev libmariadbclient-dev-compat
+#RUN apt update \
+#    && apt install -y libmariadbclient-dev libmariadbclient-dev-compat
 
 RUN cd ~ \
     && git clone --depth=1 http://github.com/redis/hiredis  \
