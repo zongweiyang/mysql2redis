@@ -49,6 +49,9 @@ select redis_command_v2("hset","hkey","hfield",json_object(json_members("op","in
 
 select free_resources();
 select redis_servers_set_v2("192.168.0.118",6379);
+//if password need
+select redis_servers_set_v2("192.168.0.118",6379,$password);
+
 ```
 
 ## What's more
