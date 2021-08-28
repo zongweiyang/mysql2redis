@@ -5,7 +5,7 @@ FROM vanjaydo/mysql2redis:latest
 # Code below is to install github opensource project mysql2redis 👉 https://github.com/dawnbreaks/mysql2redis
 # install dependences
 RUN apt-get  update
-RUN apt-get  install -y  git gcc cmake \
+RUN apt-get  install -y  git gcc cmake 
 #    && apt-get install -y  libjemalloc1 libjemalloc-dev \
 #    && apt install -y libexpat1-dev  libmysqlclient-dev libaprutil1-dev libapr1-dev \
 #    && ln -s /usr/include/apr-1.0 /usr/include/apr-1
